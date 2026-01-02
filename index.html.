@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FNC618 - Independent Streetwear</title>
+    <style>
+        /* Здесь находятся все стили для вашего сайта */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+        }
+        .hero {
+            background-image: url('0e3239e2-525a-4525-b0de-730dfe2a200e.png'); /* <-- ЗАМЕНИТЕ НАЗВАНИЕ ГЛАВНОГО ФОТО */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .hero h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+        .container {
+            padding: 40px 20px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .cta-section {
+            background-color: #00c853;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.2em;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        footer {
+            padding: 20px;
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Главный экран -->
+    <div class="hero">
+        <h1>Born in Ukraine.<br>Built on resilience.</h1>
+    </div>
+
+    <!-- Секция с описанием -->
+    <div class="container">
+        <h2>About FNC618</h2>
+        <p>The brand was created during wartime — when survival turned into a daily battle, and creativity became a form of resistance. FNC618 represents the new generation of Ukrainian streetwear: clean silhouettes, bold identity, raw authenticity.</p>
+
+        <!-- Галерея -->
+        <div class="gallery">
+            <img src="1.jpg" alt="FNC618 Streetwear"> <!-- <-- ЗАМЕНИТЕ НАЗВАНИЯ ФОТО -->
+            <img src="лого.jpeg" alt="FNC618 Streetwear">
+            <img src="25.jpg" alt="FNC618 Streetwear">
+            <img src="2026-01-02 11.33.17.jpg" alt="FNC618 Streetwear">
+            <img src="fc2d6374-6b53-46b5-a497-c64990dd817fjpg" alt="FNC618 Streetwear">
+            <img src="image-5.png" alt="FNC618 Streetwear">
+        </div>
+    </div>
+
+    <!-- Секция с призывом к действию -->
+    <div class="cta-section">
+        <h2>Get Your Bonus & Support Independent Fashion</h2>
+        <p>To get your exclusive reward, please complete one simple task from our partners. It's fast, free, and helps us continue creating.</p>
+        <br>
+        <a href="https://bestlocker.eu/iframe/8411f884-e3f3-11f0-970d-c2a106037d45" class="cta-button">GET YOUR REWARD NOW</a> <!-- <-- ВСТАВЬТЕ ВАШУ ССЫЛКУ НА ЛОКЕР -->
+    </div>
+
+    <!-- Футер (подвал) -->
+    <footer>
+        <p>FNC618 © 2025 — Independent streetwear from Ukraine</p>
+        <p>E-mail: fnc618store@gmail.com</p>
+    </footer>
+
+</body>
+</html>
