@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FNC618 - Independent Streetwear</title>
     <style>
-        /* Здесь находятся все стили для вашего сайта */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
             background-color: #1a1a1a;
             color: #ffffff;
             text-align: center;
         }
         .hero {
-            background-image: url('0e3239e2-525a-4525-b0de-730dfe2a200e.png'); /* <-- УБЕДИТЕСЬ, ЧТО ИМЯ ГЛАВНОГО ФОТО ПРАВИЛЬНОЕ */
+            background-image: url('0e3239e2-525a-4525-b0de-730dfe2a200e.png'); 
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -26,24 +25,38 @@
         .hero h1 {
             font-size: 3em;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            padding: 0 20px;
         }
         .container {
-            padding: 40px 20px;
-            max-width: 960px; /* Добавил для лучшего вида на больших экранах */
-            margin: 0 auto; /* Центрирование контейнера */
+            padding: 40px 15px;
+            max-width: 1100px; /* Увеличил ширину для более красивых рядов */
+            margin: 0 auto;
         }
+        
+        /* ОБНОВЛЕННАЯ ГАЛЕРЕЯ */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+            /* По 3 фото в ряд на ПК, по 2 на планшетах, по 1 на мобильных */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px; /* Компактный отступ между фото */
             margin-top: 30px;
         }
         .gallery img {
             width: 100%;
-            border-radius: 8px;
+            aspect-ratio: 1 / 1; /* Делает все фото КВАДРАТНЫМИ */
+            object-fit: cover; /* Обрезает лишнее, чтобы фото не искажалось */
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            filter: grayscale(20%); /* Легкий стильный эффект */
         }
+        .gallery img:hover {
+            transform: scale(1.02); /* Легкое увеличение при наведении */
+            filter: grayscale(0%);
+            cursor: pointer;
+        }
+
         .cta-section {
-            background: linear-gradient(45deg, #00c853, #00e676); /* Сделал фон градиентным */
+            background: linear-gradient(45deg, #00c853, #00e676);
             padding: 50px 20px;
             margin-top: 40px;
         }
@@ -51,66 +64,81 @@
             display: inline-block;
             background-color: #ffffff;
             color: #000000;
-            padding: 15px 30px;
+            padding: 18px 40px;
             text-decoration: none;
             font-weight: bold;
             border-radius: 50px;
             font-size: 1.2em;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Добавил тень для кнопки */
+            transition: all 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .cta-button:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
         footer {
-            padding: 20px;
+            padding: 30px;
             background-color: #111;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Адаптация видео */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 40px 0;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Главный экран -->
     <div class="hero">
         <h1>Born in Ukraine.<br>Built on resilience.</h1>
     </div>
 
-    <!-- Секция с описанием -->
     <div class="container">
         <h2>About FNC618</h2>
         <p>The brand was created during wartime — when survival turned into a daily battle, and creativity became a form of resistance. FNC618 represents the new generation of Ukrainian streetwear: clean silhouettes, bold identity, raw authenticity.</p>
 
-        <!-- НАЧАЛО БЛОКА С ВИДЕО -->
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000; margin: 40px 0; border-radius: 8px;">
+        <div class="video-container">
             <iframe 
-                src="https://www.youtube.com/embed/aG9rmV-M3ko" 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" 
+                src="https://www.youtube.com/embed/aG9rmV-M3ko"" 
                 allowfullscreen="" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 title="FNC618 Brand Video">
             </iframe>
         </div>
-        <!-- КОНЕЦ БЛОКА С ВИДЕО -->
 
-        <!-- Галерея -->
         <div class="gallery">
-            <img src="1.jpg" alt="FNC618 Streetwear">
-            <img src="logo.jpeg" alt="FNC618 Streetwear">
-            <img src="25.jpg" alt="FNC618 Streetwear">
-            <img src="gallery-4.jpg" alt="FNC618 Streetwear">
-            <img src="image.png" alt="FNC618 Streetwear">
-            <img src="image-5.png" alt="FNC618 Streetwear">
-            <img src="207.jpeg" alt="FNC618 Streetwear">
-            <img src="351.png" alt="FNC618 Streetwear">
-            <img src="817.png" alt="FNC618 Streetwear">
-            <!-- Ваши новые фотографии -->
-            <img src="86.png" alt="FNC618 Streetwear">
-            <img src="80126.jpg" alt="FNC618 Streetwear">
-            <img src="0566046.jpg" alt="FNC618 Streetwear">
+            <img src="1.jpg" alt="FNC618">
+            <img src="logo.jpeg" alt="FNC618">
+            <img src="25.jpg" alt="FNC618">
+            <img src="gallery-4.jpg" alt="FNC618">
+            <img src="image.png" alt="FNC618">
+            <img src="image-5.png" alt="FNC618">
+            <img src="207.jpeg" alt="FNC618">
+            <img src="351.png" alt="FNC618">
+            <img src="817.png" alt="FNC618">
+            <img src="86.png" alt="FNC618">
+            <img src="80126.jpg" alt="FNC618">
+            <img src="0566046.jpg" alt="FNC618">
         </div>
     </div>
 
-    <!-- Секция с призывом к действию -->
     <div class="cta-section">
         <h2>Get Your Bonus & Support Independent Fashion</h2>
         <p>To get your exclusive reward, please complete one simple task from our partners. It's fast, free, and helps us continue creating.</p>
@@ -118,7 +146,6 @@
         <a href="https://bestlocker.eu/iframe/8411f884-e3f3-11f0-970d-c2a106037d45" class="cta-button">GET YOUR REWARD NOW</a>
     </div>
 
-    <!-- Футер (подвал) -->
     <footer>
         <p>FNC618 © 2025 — Independent streetwear from Ukraine</p>
         <p>E-mail: fnc618store@gmail.com</p>
